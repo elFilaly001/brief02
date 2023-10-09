@@ -1,0 +1,11 @@
+
+header div {
+    border: 2px solid ;
+    width: 100%;
+    display: flex;
+}
+header input{
+    width: 40vw;
+    height: 5vh;
+    margin-right: 10vw;
+}
