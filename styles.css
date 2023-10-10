@@ -1,9 +1,78 @@
 
-header div {
-    border: 2px solid ;
+
+header{
     width: 100%;
     display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+
 }
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(37, 37, 37);
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+hr{
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+}
+
+.logo_serch{
+    display: flex;
+    align-items: center;
+    justify-content:left ;
+    flex-grow: 1;
+}
+
+.Sign_log_cart{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.top_menu {
+    display: flex;
+    gap: 10vw;
+}
+
+.side_menu{
+    font-weight: bold;
+    display: inline;
+    justify-content: left;
+}
+.side_menu ul{
+    margin-left: -2vw;
+}
+.side_menu li{
+    padding: 10px;
+    width: 20vw;
+    list-style: none;
+    border: 1px solid gray;
+}
+.body_img{
+    justify-content: right;
+}
+.products {
+    
+}
+.rating{
+    background-color: rgb(255, 217, 0);
+    width: 65px;
+    border-radius: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 header input{
     width: 40vw;
     height: 5vh;
