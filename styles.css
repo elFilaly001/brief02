@@ -6,15 +6,10 @@
 
 header{
     position: sticky;
-    background-color: rgb(232, 232, 232);
-    width:200vh;
     display: flex;
     padding: 10px;
-    margin-bottom: 2vh;
     top: 0;
-}
-header {
-    margin: 10px;
+    background-color: #e4e4e4;
 }
 
 
@@ -22,6 +17,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(37, 37, 37);
     
+}
+body hr {
+    margin-top: 0;
+    margin-bottom: 50px;
 }
 main{
     font-family: Arial, Helvetica, sans-serif;
@@ -294,7 +293,7 @@ h1{
 
 .reveiws {
     display: grid;
-    grid-template-columns: 40vw 60vw;
+    grid-template-columns: 40vw 50vw;
 }
 .rating_outof{
     margin-top: 20px;
@@ -316,6 +315,52 @@ h1{
     display: inline-block;
     background-color: #6b7280;
     display: inline-block;
+}
+.pfp_name_time{
+    display: flex;
+    align-items: center;
+}
+.top_review{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.last_page{
+    display: grid;
+    grid-template-columns: 60vw auto;
+    width: 95vw;
+    height: calc( 100vh - 140.39px - 99px );
+}
+.leftSide{
+    width: 60vw;
+    margin: 10px;
+    position: relative;
+}
+.LastProduct{
+    display: flex;
+    padding-inline: 10px;
+}
+.leftAndRight{
+    display: flex;
+    justify-content: space-between;
+    width: 59vw;
+}
+.leftOfLeft{
+    display: flex;
+}
+
+.righSide{
+    margin: 10px;
+}
+.prices{
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
 }
 header input{
     width: 40vw;
