@@ -9,13 +9,17 @@ header{
     display: flex;
     padding: 10px;
     top: 0;
-    background-color: #e4e4e4;
+    z-index: 5;
+    background-color: #ffffff;
 }
 
 
 body{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(37, 37, 37);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     
 }
 body hr {
@@ -227,7 +231,7 @@ h1{
     background-color: #6b7280;
 }
 .plus{
-        width: 30px;
+    width: 30px;
     height: 30px;
     border-radius:50% ;
     display: flex;
@@ -238,7 +242,6 @@ h1{
 }
 .btn_payment{
     border: 1px solid;
-    width: 30vw;
     display: block;
     margin-bottom: 20px;
     text-align: center;
@@ -328,23 +331,21 @@ h1{
 
 .last_page{
     display: grid;
-    grid-template-columns: 60vw auto;
-    width: 95vw;
-    height: calc( 100vh - 140.39px - 99px );
+    /* grid-template-columns: 60% auto; */
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr) );
+    width: 100%s;
+
 }
 .leftSide{
-    width: 60vw;
     margin: 10px;
     position: relative;
 }
 .LastProduct{
-    display: flex;
     padding-inline: 10px;
 }
 .leftAndRight{
     display: flex;
     justify-content: space-between;
-    width: 59vw;
 }
 .leftOfLeft{
     display: flex;
@@ -366,15 +367,79 @@ header input{
     width: 40vw;
     height: 5vh;
     margin-right: 10vw;
+    border-radius: 5px;
 }
 
 footer{
     width: 100%;
-    height: 5vh;
     background-color: gray;
-    margin-top: 5vh;
+    margin-top: auto;
     padding-top: 1vh;
+    padding-bottom: 10px;
     color: aliceblue;
     text-align: center;
     align-items: center;
 }
+#_burger{
+    display: none;
+}
+@media screen and ( max-width: 500px ) {
+    header input{
+        margin: 0;
+    }
+    .Sign_log_cart{
+        display: none;
+        position: absolute;
+        top: 70px;
+        height:15vh; 
+        background-color: #ffffff;
+        border: 2px solid;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        left: 7%;
+    }
+    .Sign_log_cart a:last-child {
+        margin-right: 100px;
+    }
+    .Sign_log_cart hr {
+        display: none;
+    }
+    .last_page{
+        grid-template-columns: repeat(auto-fit, minmax(400px,1fr) );
+    }
+    #_burger{
+        display: block;
+        font-size: 30px;
+    }
+    .btn_payment{
+        margin-left: 0;
+    }
+    header input{
+        display: none;
+    }
+}
+@media screen and ( max-width: 400px ) {
+    .Sign_log_cart {
+        display: none;
+    }
+    #_burger{
+        display: block;
+        font-size: 30px;
+    }
+    
+    .last_page{
+        grid-template-columns: repeat(auto-fit, minmax(365px,1fr) );
+    }
+     .btn_payment{
+        margin-left: 0;
+     }
+}
+
+@media screen and ( min-width : 500px ) {
+    .Sign_log_cart {
+        display: flex !important;
+    }
+} 
