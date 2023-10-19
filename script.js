@@ -1,12 +1,31 @@
 function call() {
+  // alert(window.getComputedStyle(document.getElementById("_burger")).getPropertyValue('display'));
+  var Sign = document.querySelector("#Sign_log_cart");
+  // var getS = window.getComputedStyle(Sign).getPropertyValue("display");
+  let getinfo = Sign.className;
+  if (getinfo == "Sign_log_cart") {
+    Sign.classList.add("menu_out");
+    Sign.classList.remove("Sign_log_cart");
+  } else if (getinfo == "menu_out") {
+    Sign.classList.add("Sign_log_cart");
+    Sign.classList.remove("menu_out");
+  }
+}
 
-   // alert(window.getComputedStyle(document.getElementById("_burger")).getPropertyValue('display'));
-    var Sign = document.getElementsByClassName("Sign_log_cart")[0];
-    var getS = window.getComputedStyle(Sign).getPropertyValue("display");
-    if (getS === "none") {
-        document.getElementsByClassName("Sign_log_cart")[0].style.display = "flex";
-    } else if (getS === "flex") {
-         document.getElementsByClassName("Sign_log_cart")[0].style.display = "none";
-    }
-    return false;
+function search() {
+  var Sign = document.querySelector("#recherch");
+  // var getS = window.getComputedStyle(Sign).getPropertyValue("display");
+  let getS = Sign.className;
+  if (getS == "recherch") {
+    Sign.classList.add("recherch_out");
+    Sign.classList.remove("recherch");
+  }
+}
+function quit_search() {
+  var Sign = document.querySelector("#recherch");
+  let getS = Sign.className;
+  if (getS === "recherch_out") {
+    Sign.classList.add("recherch");
+    Sign.classList.remove("recherch_out");
+  }
 }
