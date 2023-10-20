@@ -107,6 +107,7 @@ h1 {
 }
 .desc_product {
   margin-left: 10px;
+  padding-bottom: 10px;
 }
 .rating {
   background-color: rgb(255, 217, 0);
@@ -176,7 +177,7 @@ input {
 .img_prd {
   display: grid;
   grid-template-columns: 10vw 10vw 10vw;
-  grid-template-rows: 35vh 10vh;
+  align-self: start;
 }
 .sizes {
   margin-top: 10px;
@@ -285,12 +286,12 @@ input {
   margin: 10px;
 }
 .middle_page img {
-  width: 30vw;
+  width: 50vw;
   border-radius: 5px;
 }
 .img_flex {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .reveiws {
@@ -401,6 +402,7 @@ i {
 }
 #woman1 {
   width: 29vw;
+  min-width: 100px;
 }
 #woman2,
 #woman3,
@@ -525,11 +527,12 @@ i {
     margin-bottom: 30px;
   }
   .img_prd {
-    grid-template-columns: 50% 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 300px 150px;
+    grid-template-rows: 10vh 10vh 10vh;
   }
   #woman1 {
-    width: 45vw;
+    width: 96%;
+    height: 28vh;
     grid-row-start: 1;
     grid-row-end: 4;
     grid-column-start: 1;
@@ -538,19 +541,20 @@ i {
   #woman2,
   #woman3,
   #woman4 {
+    width: auto;
     grid-column-start: 2;
   }
   #woman2 {
-    width: 12vw;
+    height: 8vh;
     grid-row-start: 1;
     grid-row-end: 2;
   }
   #woman3 {
-    width: 12vw;
+    height: 8vh;
     grid-row-start: 2;
   }
   #woman4 {
-    width: 12vw;
+    height: 8vh;
     grid-row-start: 3;
   }
 }
