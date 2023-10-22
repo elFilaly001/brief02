@@ -587,6 +587,7 @@ i {
       font-size: 30px;
       text-align: left;
       margin-bottom: 50px;
+      width: 50px;
     }
     .checking_out {
       position: absolute;
