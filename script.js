@@ -29,3 +29,18 @@ function quit_search() {
     Sign.classList.remove("recherch_out");
   }
 }
+
+var arr = document.querySelector("#checkin");
+var arr1 = document.querySelector("#check");
+var mark = arr1.className;
+
+arr.addEventListener("click", () => {
+  var mark = arr1.className;
+  if (mark == "checking") {
+    arr1.classList.add("checking_out");
+    arr1.classList.remove("checking");
+  } else if (mark == "checking_out") {
+    arr1.classList.add("checking");
+    arr1.classList.remove("checking_out");
+  }
+});

@@ -16,10 +16,29 @@
           src="B2/logoamazon-removebg-preview.png"
           alt="logo amazon"
           style="width: 50px; margin-right: 30px" />
-        <input type="text" name="recherch_produit" placeholder="    Search" />
+        <div class="recherch" id="recherch">
+          <input
+            type="text"
+            name="recherch_produit"
+            id="recherch_produit"
+            placeholder="    Search" />
+          <button
+            id="quit_btn_search"
+            style="background: none; border: none"
+            onclick="quit_search()">
+            <i class="fa-solid fa-xmark" style="margin-left: 10px"></i>
+          </button>
+          <button
+            id="btn_search"
+            style="background: none; border: none"
+            onclick="search()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
       </div>
-      <div class="Sign_log_cart">
-        <a href="" style="margin-inline: 5px">Sign up</a>|
+      <div class="Sign_log_cart" id="Sign_log_cart">
+        <a href="" style="margin-inline: 5px">Sign up</a>
+        <hr />
         <a href="" style="margin-inline: 5px">Log in</a>
         <img
           src="B2/118-marruecos_400px.jpg"
@@ -32,37 +51,51 @@
           style="width: 30px; height: 30px; margin-inline: 5px" />
         <label style="margin-inline: 5px">5</label>
       </div>
+      <button
+        id="_burger"
+        style="background: none; border: none"
+        onclick="call()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
     <hr />
     <main>
       <div class="product_page">
-        <div class="checking">
-          <span><b>Marque</b></span
-          ><br />
-          <input type="checkbox" name="check_adidas" />
-          <span>Adidas</span><br />
-          <input type="checkbox" name="check_nike" />
-          <span>Nike</span><br />
-          <input type="checkbox" name="check_Puma" />
-          <span>Puma</span><br />
-          <span><b>Shipping</b></span
-          ><br />
-          <input type="checkbox" name="check_adidas1" />
-          <span>Adidas</span><br />
-          <input type="checkbox" name="check_nike1" />
-          <span>Nike</span><br />
-          <input type="checkbox" name="check_Puma1" />
-          <span>Puma</span><br />
-          <span><b>price</b></span
-          ><br />
-          <input type="range" name="price_range" />
+        <button id="checkin" style="background: none; border: none">
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+        <div class="checking" id="check">
+          <div class="mark">
+            <span><b>Marque</b></span
+            ><br />
+            <input type="checkbox" name="check_adidas" />
+            <span>Adidas</span><br />
+            <input type="checkbox" name="check_nike" />
+            <span>Nike</span><br />
+            <input type="checkbox" name="check_Puma" />
+            <span>Puma</span>
+          </div>
+          <div class="shipping">
+            <span><b>Shipping</b></span
+            ><br />
+            <input type="checkbox" name="check_adidas1" />
+            <span>Adidas</span><br />
+            <input type="checkbox" name="check_nike1" />
+            <span>Nike</span><br />
+            <input type="checkbox" name="check_Puma1" />
+            <span>Puma</span>
+          </div>
+          <div class="pri">
+            <span><b>price</b></span>
+            <input type="range" name="price_range" />
+          </div>
         </div>
         <div class="filters_products">
           <div class="filter">
             <span>1 - 12 over 21000 result for <b>"keybord"</b></span>
             <div>
               <span>Sort by : </span>
-              <select name="Sort" style="width: 10vw; height: 4vh">
+              <select name="Sort" style="width: 150px; height: 4vh">
                 <option value="price">price</option>
                 <option value="alphabetic">alphabetic</option>
                 <option value="price">price</option>
@@ -91,11 +124,7 @@
               <a href="page3.html"
                 ><div
                   class="product"
-                  style="
-                    height: 50vh;
-                    width: 19vw;
-                    background-color: rgb(170, 170, 170);
-                  ">
+                  style="background-color: rgb(170, 170, 170)">
                   <div class="product_img">
                     <img
                       src="B2/Clavie.png"
@@ -139,13 +168,7 @@
                   </div>
                 </div>
               </a>
-              <div
-                class="product"
-                style="
-                  height: 50vh;
-                  width: 19vw;
-                  background-color: rgb(170, 170, 170);
-                ">
+              <div class="product" style="background-color: rgb(170, 170, 170)">
                 <div class="product_img">
                   <img
                     src="B2/Clavie.png"
@@ -182,13 +205,7 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="product"
-                style="
-                  height: 50vh;
-                  width: 19vw;
-                  background-color: rgb(170, 170, 170);
-                ">
+              <div class="product" style="background-color: rgb(170, 170, 170)">
                 <div class="product_img">
                   <img
                     src="B2/Clavie.png"
@@ -225,13 +242,7 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="product"
-                style="
-                  height: 50vh;
-                  width: 19vw;
-                  background-color: rgb(170, 170, 170);
-                ">
+              <div class="product" style="background-color: rgb(170, 170, 170)">
                 <div class="product_img">
                   <img
                     src="B2/Clavie.png"
@@ -268,13 +279,7 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="product"
-                style="
-                  height: 50vh;
-                  width: 19vw;
-                  background-color: rgb(170, 170, 170);
-                ">
+              <div class="product" style="background-color: rgb(170, 170, 170)">
                 <div class="product_img">
                   <img
                     src="B2/Clavie.png"
