@@ -471,11 +471,23 @@ select {
   .contact input,
   select {
     width: 95%;
-    height: 30px;
+    height: 45px;
   }
   #_MSG {
     width: 95%;
     height: 100px;
+  }
+  .location {
+    margin-top: 0;
+  }
+  .location > iframe {
+    border-radius: 5px;
+  }
+  .socials {
+    text-align: center;
+  }
+  .socials > a {
+    margin: 5px;
   }
 }
 @media screen and (max-width: 700px) {
