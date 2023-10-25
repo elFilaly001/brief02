@@ -47,12 +47,72 @@
           alt="drapo maroc"
           style="width: 40px; height: 30px; margin-inline: 5px" />
         <label style="margin-inline: 5px">MAR</label>
-        <img
-          src="B2/cart.png"
-          alt="cart image"
-          style="width: 30px; height: 30px; margin-inline: 5px" />
-        <label style="margin-inline: 5px">5</label>
+        <button id="cart">
+          <img
+            src="B2/cart.png"
+            alt="cart image"
+            style="width: 30px; height: 30px; margin-inline: 5px" />
+        </button>
+        <label style="margin-inline: 5px">0</label>
       </div>
+      <div class="cart_menu" id="cart_menu">
+        <h2 style="text-align: center">Cart</h2>
+        <hr />
+        <div class="LastProduct">
+          <div class="leftAndRight">
+            <div class="leftOfLeft">
+              <div
+                style="
+                  height: 100px;
+                  width: 100px;
+                  background-color: darkgrey;
+                  border-radius: 5px;
+                  margin: 5px;
+                "></div>
+              <div style="margin-left: 15px">
+                <span>Product Name</span>
+                <div
+                  style="
+                    height: 20px;
+                    background-color: darkgrey;
+                    padding: 5px;
+                    text-align: center;
+                    border-radius: 30px;
+                  ">
+                  <span style="font-weight: bold">HHHHHHH</span>
+                </div>
+                <h2>$1900</h2>
+                <span>shipping : $18</span>
+              </div>
+            </div>
+            <div class="rightOfLeft">
+              <div style="text-align: center; margin-top: 5px">
+                <i class="fa-regular fa-heart" style="margin-right: 30px"></i>
+                <i class="fa-solid fa-trash"></i>
+              </div>
+              <div class="quantity">
+                <button id="btn_minus">
+                  <div class="minus">
+                    <h2 style="margin-top: 5px">-</h2>
+                  </div>
+                </button>
+
+                <h2 id="qte">1</h2>
+                <button id="btn_plus">
+                  <div class="plus">
+                    <h2 style="margin-top: 5px">+</h2>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr style="margin-bottom: 10px" />
+        <h4 style="display: inline-block; text-align: left">Total</h4>
+        <h4 style="display: inline-block">$ <span id="prx">1900</span></h4>
+        <a href="page4.html">Details</a>
+      </div>
+
       <button
         id="_burger"
         style="background: none; border: none"

@@ -458,7 +458,54 @@ select {
 .location a {
   margin-inline: 10px;
 }
+.socials {
+  text-align: center;
+}
+.side_out {
+  display: none;
+}
+button {
+  border: none;
+  background: none;
+}
+.cart_menu {
+  display: none;
+}
 
+.cart_out {
+  display: block;
+  position: absolute;
+  background-color: #f3f4f6;
+  height: auto;
+  width: 500px;
+  padding-inline: 10px;
+  right: 30px;
+  top: 85px;
+  text-align: right;
+  border: 1px solid;
+  border-radius: 5px;
+  padding-bottom: 15px;
+  animation: anime_top 0.3s;
+}
+.cart_out a {
+  padding: 10px;
+  background-color: #6b7280;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+@keyframes anime_top {
+  0% {
+    opacity: 0.6;
+    transform: translateY(-30px);
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 /* .menu_out {
   display: none;
 } */
@@ -467,6 +514,7 @@ select {
   .cont {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    margin-bottom: 50px;
   }
   .contact input,
   select {
@@ -483,9 +531,7 @@ select {
   .location > iframe {
     border-radius: 5px;
   }
-  .socials {
-    text-align: center;
-  }
+
   .socials > a {
     margin: 5px;
   }
