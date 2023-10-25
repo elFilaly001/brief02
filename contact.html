@@ -65,9 +65,9 @@
           <h1 style="text-align: center; text-decoration: underline">
             Contact
           </h1>
-          <input type="text" placeholder="Nom" required />
-          <input type="text" placeholder="Preom" required />
-          <input type="text" placeholder="Email" required />
+          <input type="text" id="nom" placeholder="Nom*" />
+          <input type="text" id="prenom" placeholder="Preom*" />
+          <input type="text" id="mail" placeholder="Email*" />
           <select name="Problem" id="ProblemT">
             <option value="tech">Technique</option>
             <option value="tech1">Technique</option>
@@ -77,19 +77,23 @@
             id="_MSG"
             cols="30"
             rows="10"
-            placeholder="Message"
-            required></textarea>
-          <input type="submit" id="env" value="Envoyer" />
+            placeholder="Message*"
+            id="msg"></textarea>
+          <input type="submit" id="send" value="Envoyer" />
+          <p id="validation"></p>
         </form>
         <div class="location">
           <h1 style="text-align: center; text-decoration: underline">
             Notre Localisation
           </h1>
           <iframe
-            src="https://www.google.com/maps/d/u/0/embed?mid=1-VlXsvMWMr8EotfMcIwYKt-1SrI"
-            frameborder="0"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13498.899852906557!2d-8.517190949999998!3d32.2385713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sma!4v1698164543650!5m2!1sen!2sma"
+            width="90%"
             height="400px"
-            width="80%"></iframe>
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       <h1 style="text-align: center; text-decoration: underline">

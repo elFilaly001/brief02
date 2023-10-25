@@ -43,9 +43,29 @@ function sideB(id_class, class_to_chek, nom_new_class) {
   }
 }
 
+function checkmail(mail) {
+  const check_mail = /^[a-zA-Z0-9._-$*]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  console.log(check_mail.test(mail));
+  return check_mail.test(mail);
+}
+function check_txt(txt) {
+  const check = /[a-zA-Z]/;
+  return check.test(txt);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   let btn1 = document.querySelector("#checkin");
   let btn2 = document.querySelector("#p1_side");
+  let btn3 = document.querySelector("#cart");
+  let btn4 = document.querySelector("#btn_plus");
+  let btn5 = document.querySelector("#btn_minus");
+  let btn6 = document.querySelector("#send");
+  let txt1 = document.querySelector("#qte");
+  let txt2 = document.querySelector("#prx");
+  let txt3 = document.querySelector("#nom");
+  let txt4 = document.querySelector("#prenom");
+  let txt5 = document.querySelector("#mail");
+  let txt7 = document.querySelector("#validation");
   console.log(btn2);
   btn2?.addEventListener("click", () => {
     sideB("side_M", "side_menu", "side_out");
@@ -53,6 +73,32 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(btn1);
   btn1?.addEventListener("click", () => {
     sideB("check", "checking", "checking_out");
+  });
+  console.log(btn3);
+  btn3?.addEventListener("click", () => {
+    sideB("cart_menu", "cart_menu", "cart_out");
+  });
+  btn4?.addEventListener("click", () => {
+    txt1.innerHTML = parseInt(txt1.innerHTML) + 1;
+    txt2.innerHTML = parseInt(txt2.innerHTML) + 1900;
+  });
+  btn5?.addEventListener("click", () => {
+    if (parseInt(txt1.innerHTML) > 1) {
+      txt1.innerHTML = parseInt(txt1.innerHTML) - 1;
+      txt2.innerHTML = parseInt(txt2.innerHTML) - 1900;
+    }
+  });
+  btn6.addEventListener("click", () => {
+    console.log("clicked");
+    if (!check_txt(txt3)) {
+      txt7.innerHTML = "entrez un nom valid ";
+    }
+    if (!check_txt(txt4)) {
+      txt7.innerHTML = "entrez un prenom valid ";
+    }
+    if (!checkmail(txt5)) {
+      txt7.innerHTML = "entrez un mail valid ";
+    }
   });
 });
 
